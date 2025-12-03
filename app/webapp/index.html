@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Good Vibes Defenders</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.js"></script>
+  <script src="shared/gameConfig.js"></script>
+  <script src="shared/enemyTypes.js"></script>
+  <script src="shared/playerTypes.js"></script>
+  <script src="phaserGame.js"></script>
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Good Vibes Defenders</h1>
+    <div class="top-bar">
+      <div>Realtime multiplayer prototype</div>
+      <div class="join-controls">
+        <input
+          id="nameInput"
+          class="name-input"
+          type="text"
+          placeholder="Choose your name"
+          maxlength="20"
+        />
+        <button id="joinBtn">Join Match</button>
+      </div>
+    </div>
+
+    <div class="hud">
+      <div class="hud-cards">
+        <div class="hud-card">
+          <span class="label">Health</span>
+          <span class="value" id="hudHealth">100</span>
+        </div>
+        <div class="hud-card">
+          <span class="label">Shield</span>
+          <span class="value" id="hudShield">50</span>
+        </div>
+        <div class="hud-card">
+          <span class="label">Lives</span>
+          <span class="value" id="hudLives">3</span>
+        </div>
+        <div class="hud-card">
+          <span class="label">Wave</span>
+          <span class="value" id="hudWave">1</span>
+        </div>
+        <div class="hud-card">
+          <span class="label">Next Wave</span>
+          <span class="value" id="hudNextWave">--</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-wrapper">
+      <div id="game-container" class="game-surface"></div>
+      <div class="side-panels">
+        <div class="panel scoreboard">
+          <h3>Scoreboard</h3>
+          <ul id="scoreboardList"></ul>
+        </div>
+        <div class="panel connected">
+          <h3>Connected Players</h3>
+          <ul id="connectedList"></ul>
+        </div>
+        <div class="panel enemy-legend">
+          <h3>Enemy Types</h3>
+          <ul id="enemyLegendList"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
